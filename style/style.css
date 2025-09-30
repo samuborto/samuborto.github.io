@@ -4,94 +4,98 @@ body{
     background-size: cover;
     margin: 0;
 }
-* {
+* { 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: sans-serif;
-  }
-  
-  .menu {
+}
+
+.menu {
+    position: relative; /* Per permettere posizionamento assoluto */
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: flex-start; /* Logo a sinistra */
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px 20px;
-    position: relative;
-  }
-  
-  #logo {
+}
+
+#logo {
     color: white;
     text-decoration: none;
     font-size: 25px;
     font-weight: bold;
-  }
-  
-  /* Nascondi checkbox */
-  .menu-toggle {
+    /* resta a sinistra */
+}
+
+/* Menu items posizionati assolutamente al centro */
+.nav-items {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 60px; /* Aumentato da 20px a 60px */
+}
+
+/* Nascondi checkbox */
+.menu-toggle {
     display: none;
-  }
-  
-  /* Hamburger icon */
-  .hamburger {
+}
+
+/* Hamburger icon */
+.hamburger {
     display: none;
     font-size: 30px;
     color: white;
     cursor: pointer;
-  }
-  
-  /* Menu items */
-  .nav-items {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .items {
+}
+
+/* Stile dei link */
+.items {
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 24px; /* Aumentato da 18px a 24px */
     font-weight: bolder;
     transition: color 1.5s, transform 0.3s ease;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
-  }
-  
-  .items:hover {
-    background-color: white;
-    color: black;
+}
+
+.items:hover {
+    color: rgb(255, 0, 0);
     cursor: pointer;
     transform: scale(1.1);
-  }
-  
-  /* Responsive behavior */
-  @media (max-width: 768px) {
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
     .hamburger {
-      display: block;
+        display: block;
     }
-  
+
     .nav-items {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      margin-top: 10px;
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 10px 0;
+        position: static; /* Per adattarsi al layout mobile */
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        padding: 10px 0;
+        transform: none;
     }
-  
+
     /* Mostra il menu quando il checkbox è selezionato */
     .menu-toggle:checked ~ .nav-items {
-      display: flex;
+        display: flex;
     }
-  
+
     .items {
-      padding: 10px 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 10px 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
     }
-  }
+}
 .banner{
     display: flex;
     background-color: rgba(255, 255, 255, 0.2);
