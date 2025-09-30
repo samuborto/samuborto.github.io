@@ -5,13 +5,15 @@ body{
     margin: 0;
 }
 .menu{
+    display: flex;
     width: 100%;
+    height: auto;
     background-color: rgba(0, 0, 0, 0.5);
     text-align: left;
-    display: flex;
     align-items: center;
 }
 .items{
+    display: flex;
     height: 400%;
     text-decoration: none;
     color: white;
@@ -46,9 +48,10 @@ body{
     align-items: center;
 }
 h1{
+    display: flex;
     color: white;
-    font-size: 100px;
-    margin-right: 70px;
+    font-size: 500%;
+    text-align: center;
     text-shadow: 10px 10px 20px color(srgb 0 0 0);
 }
 .riga_larga{
@@ -67,10 +70,12 @@ h1{
     margin-top: 50px;
     margin-right: 150px;
     margin-bottom: 50px;
+    padding: 20px 30px;
 }
 .cont{
-    width: 600px;
-    height: 300px;
+    display: flex;
+    width: 50%;
+    height: 80%;
     position: relative;
     overflow: hidden;
 }
@@ -99,13 +104,14 @@ h1{
     transform: scale(1.1);
 }
 .testo_d{
-    width: 600px;
-    height: 400px;
+    display: flex;
+    width: 50%;
+    height: 80%;
     color: white;
-    margin-left: 50px;
     text-align: center;
     font-size: 25px;
     text-shadow: 1px 1px 2px color(srgb 255 255 255);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .di_piu{
     text-decoration: none;
@@ -118,13 +124,14 @@ h1{
     transform: scale(1.2);
 }
 .testo_s{
-    width: 600px;
-    height: 400px;
+    display: flex;
+    width: 50%;
+    height: 80%;
     color: white;
-    margin-right: 50px;
     text-align: center;
     font-size: 25px;
     text-shadow: 1px 1px 2px color(srgb 255 255 255);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 h2{
     text-align: center;
@@ -158,4 +165,80 @@ table{
 }
 .tab_car{
     font-size: 30px;
+}
+@media(max-width: 1024px){
+    .menu{
+        flex-direction: column;
+        text-align: center;
+    }
+    .items, #logo{
+        padding: 20px;
+        font-size: 20px;
+    }
+    .storia{
+        flex-direction: column;
+        margin: 30px;
+    }
+    .cont, .testo_d, .testo_s{
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    h1{
+        font-size: 300%;
+        text-align: center;
+    }
+    h2{
+        font-size: 60px;
+    }
+    .lista{
+        font-size: 20px;
+    }
+    .tab_car{
+        font-size: 20px;
+    }
+}
+@media (max-width: 768px){
+    .menu{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .items, #logo{
+        font-size: 18px;
+        padding: 15px;
+        width: 100%;
+    }
+    .banner{
+        flex-direction: column;
+        padding: 10px;
+    }
+    h1{
+        font-size: 200%;
+    }
+    h2{
+        font-size: 40px;
+    }
+    .storia{
+        flex-direction: column;
+        margin: 20px;
+        padding: 10px;
+    }
+    .cont, .testo_d, .testo_s{
+        width: 100%;
+        height: auto;
+        font-size: 18px;
+    }
+    .lista{
+        font-size: 18px;
+    }
+    table{
+        width: 95%;
+        font-size: 16px;
+    }
+    #int{
+        font-size: 30px;
+    }
+    .tab_car{
+        font-size: 18px;
+    }
 }
