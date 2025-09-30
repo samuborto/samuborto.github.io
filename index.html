@@ -7,14 +7,18 @@
     <link rel="icon" type="image/x-icon" href="./img/logo.png">
 </head>
 <body>
-    <div class="menu">
+    <nav class="menu">
         <a id="logo" href="https://www.acmilan.com/it"><img src="./img/logo.png" widht="auto" height="100px"/></a>
-        <a href="#storia" class="items">STORIA</a>
-        <a href="#rosa" class="items">ROSA</a>
-        <a href="#trofei" class="items">TROFEI</a>
-        <a href="" class="items">KIT ABBIGLIAMENTO</a>
-        <a href="" class="items">BIGLIETTERIA</a>
-    </div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+        <div class="nav-items">
+            <a href="#storia" class="items">STORIA</a>
+            <a href="#rosa" class="items">ROSA</a>
+            <a href="#trofei" class="items">TROFEI</a>
+            <a href="" class="items">KIT ABBIGLIAMENTO</a>
+            <a href="" class="items">BIGLIETTERIA</a>
+        </div>
+    </nav>
 
     <div class="banner">
         <img src="./img/banner.png" height="auto" width="37%"/>
@@ -118,12 +122,17 @@
     <div id="foto_rosa"> 
         <img src="./img/rosa.jpg" widht="auto" height="400px"/>
         <ul class="lista">
-            POR
-            <li>16. Mike Maignan [C]</li>
-            <li>1.  Pietro Terracciano</li>
-            <li>96. Lorenzo Torriani</li>
+            <div class="cerchio">
+                POR
+                <li>16. Mike Maignan [C]</li>
+                <li>1.  Pietro Terracciano</li>
+                <li>96. Lorenzo Torriani</li>
+            </div>
+
             <br>
-            DIF
+
+            <div class="cerchio">
+                DIF
             <li>24. Zachary Athekame</li>
             <li>33. Davide Bartesaghi</li>
             <li>5.  Koni De Winter</li>
@@ -132,10 +141,14 @@
             <li>27. David Odogu</li>
             <li>31, Strahinja Pavlovic</li>
             <li>23. Fikayo Tomori</li>
+            </div>
+           
+            
         </ul>
 
         <ul class="lista">
-            CEN
+            <div class="cerchio">
+                CEN
             <li>19. Youssouf Fofana</li>
             <li>30. Ardon Jashari</li>
             <li>8.  Ruben Loftus-Cheek</li>
@@ -144,11 +157,16 @@
             <li>12. Adrien Rabiot</li>
             <li>4.  Samuele Ricci</li>
             <li>56. Alexis Saelemaekers</li>
+            </div>
+            
             <br>
-            ATT
+
+            <div class="cerchio">
+                ATT
             <li>7.  Santiago Gimenez</li>
             <li>10. Rafael Leao</li>
             <li>18. Christopher Nkunku</li>
+            </div>
         </ul>
     </div>
 

@@ -4,43 +4,94 @@ body{
     background-size: cover;
     margin: 0;
 }
-.menu{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+  }
+  
+  .menu {
     display: flex;
-    width: 100%;
-    height: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    text-align: left;
     align-items: center;
-}
-.items{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    position: relative;
+  }
+  
+  #logo {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  /* Nascondi checkbox */
+  .menu-toggle {
+    display: none;
+  }
+  
+  /* Hamburger icon */
+  .hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Menu items */
+  .nav-items {
     display: flex;
-    height: 400%;
+    gap: 20px;
+  }
+  
+  .items {
     text-decoration: none;
     color: white;
-    padding: 40px 40px;
-    text-align: center;
-    font-size: 25px;
+    font-size: 18px;
     font-weight: bolder;
-    display: inline-block;
-    transition: color 1.5s;
-    transition: transform 0.3s ease;
-    text-shadow: 3px 3px 6px color(srgb 0 0 0);
-}
-.items:hover{
-    background-color: rgb(255, 255, 255);
+    transition: color 1.5s, transform 0.3s ease;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
+  }
+  
+  .items:hover {
+    background-color: white;
     color: black;
     cursor: pointer;
     transform: scale(1.1);
-}
-#logo{
-    height: 400%;
-    text-decoration: none;
-    color: white;
-    padding: 20px 30px;
-    text-align: center;
-    font-size: 25px; 
-    display: inline-block;
-}
+  }
+  
+  /* Responsive behavior */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .nav-items {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 10px;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px 0;
+    }
+  
+    /* Mostra il menu quando il checkbox è selezionato */
+    .menu-toggle:checked ~ .nav-items {
+      display: flex;
+    }
+  
+    .items {
+      padding: 10px 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+  }
 .banner{
     display: flex;
     background-color: rgba(255, 255, 255, 0.2);
@@ -152,6 +203,9 @@ html {
     margin-left: 20px;
     color: white;
     font-size: 25px;
+}
+.cerchio{
+    border-radius: 50px;
 }
 table{
     width: 70%;
