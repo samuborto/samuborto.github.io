@@ -6,6 +6,7 @@
     <title>A. C. Milan</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -15,9 +16,8 @@
 
         <div class="menu">
             <a href="#storia">storia</a>
-            <a href="#">rosa</a>
-            <a href="#">trofei</a>
-            <a href="#">kit</a>
+            <a href="#rosa">rosa</a>
+            <a href="#trofei">trofei</a>
         </div>
 
         <input type="checkbox" id="menu-toggle">
@@ -29,13 +29,12 @@
 
         <div class="dropdown">
             <a href="#storia">storia</a>
-            <a href="#">rosa</a>
-            <a href="#">trofei</a>
-            <a href="#">kit</a>
+            <a href="#rosa">rosa</a>
+            <a href="#trofei">trofei</a>
         </div>
     </nav>
 
-    <!-- Banner -->
+    <!--Banner-->
     <section class="banner">
         <img src="img/banner.png" alt="Simbolo Milan" class="banner-left">
         <h1>sempre<br>con te...</h1>
@@ -44,24 +43,24 @@
 
     <hr class="divider">
 
-    <!-- SEZIONE STORIA -->
+    <!--STORIA-->
     <section id="storia" class="storia-section">
         <h2>STORIA</h2>
 
         <div class="storia-gallery">
-            <!-- Prima riga -->
+            <!--Prima riga-->
             <div class="storia-row">
                 <img src="img/storia_1.jpg" alt="Storia 1">
                 <img src="img/storia_2.jpg" alt="Storia 2">
             </div>
 
-            <!-- Seconda riga -->
+            <!--Seconda riga-->
             <div class="storia-row">
                 <img src="img/storia_3.jpg" alt="Storia 3">
                 <img src="img/storia_4.jpg" alt="Storia 4">
             </div>
 
-            <!-- Terza riga (immagine singola centrata) -->
+            <!--Terza riga-->
             <div class="storia-row single">
                 <img src="img/storia_5.jpg" alt="Storia 5">
             </div>
@@ -69,5 +68,59 @@
     </section>
 
     <hr class="divider">
+
+    <!-- ROSA -->
+    <section id="rosa" class="rosa-section">
+        <h2>ROSA</h2>
+    
+        <div class="rosa-content">
+            <img src="img/rosa.jpg" alt="Foto squadra AC Milan" class="rosa-img">
+
+            <ul class="rosa-list">
+                <li><a href="">POR</a></li>
+                <li><a href="">DIF</a></li>
+                <li><a href="">CEN</a></li>
+                <li><a href="">ATT</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <section id="trofei" class="trofei-section">
+        <table class="trofei-table">
+          <thead>
+            <tr>
+              <th>NAZIONALI</th>
+              <th>INTERNAZIONALI</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Campionati Italiani</td>
+              <td>Champions League</td>
+            </tr>
+            <tr>
+              <td>Coppa Italia</td>
+              <td>Supercoppe Europee</td>
+            </tr>
+            <tr>
+              <td>Supercoppa Italiana</td>
+              <td>Coppe delle Coppe</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Coppe Intercontinentali</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Coppa del Mondo per Club</td>
+            </tr>
+          </tbody>
+        </table>
+    </section>
+    
+    <hr class="divider">
+    
 </body>
 </html>
