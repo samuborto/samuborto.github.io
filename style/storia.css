@@ -1,0 +1,169 @@
+/* === RESET BASE === */
+* {
+  margin: 0; /* Rimuove margini predefiniti */
+  padding: 0; /* Rimuove padding predefiniti */
+  box-sizing: border-box; /* Include bordi e padding nel calcolo dimensioni */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Font principale */
+  background: url(../img/sfondo.jpg) no-repeat center/cover; /* Sfondo a pieno schermo */
+  color: #fff; /* Colore testo */
+  line-height: 1.6; /* Migliora leggibilità */
+}
+
+/* === HEADER === */
+.header {
+  display: flex; /* Layout orizzontale */
+  align-items: center; /* Allineamento verticale */
+  justify-content: center; /* Centra contenuto */
+  background: #fff; /* Sfondo bianco */
+  color: #000; /* Testo nero */
+  padding: 1rem 2rem; /* Spaziatura interna */
+  gap: 1rem; /* Distanza tra elementi */
+  position: relative; /* Per elementi assoluti */
+  flex-wrap: wrap; /* Adattamento su mobile */
+}
+
+.header a img {
+  height: clamp(50px, 8vw, 60px); /* Altezza fluida */
+  object-fit: contain; /* Mantiene proporzioni */
+  display: block; /* Evita spazi indesiderati */
+  filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.7)); /* Ombra logo */
+  transition: transform 0.3s ease; /* Animazione hover */
+}
+.header a img:hover { transform: scale(1.1); } /* Zoom leggero al passaggio */
+
+.header h1 {
+  flex: 1; /* Occupa spazio restante */
+  text-align: center; /* Centra testo */
+  font-size: clamp(1.5rem, 3vw, 2.5rem); /* Titolo fluido */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Ombra testo */
+}
+
+/* === SPACER === */
+.spacer { height: 40px; } /* Spazio sotto header */
+
+/* === MAIN CONTENT === */
+.main-content {
+  display: flex; /* Layout due colonne */
+  justify-content: space-between; /* Distribuisce sezioni */
+  flex-wrap: wrap; /* Adattabile su mobile */
+  padding: 0 2rem 3rem; /* Spazi interni */
+  gap: 1.5rem; /* Distanza tra blocchi */
+}
+
+/* === SEZIONE TESTO === */
+.text-section {
+  flex: 1 1 55%; /* Larghezza principale */
+  max-width: 55%; /* Limite massimo */
+  padding-right: 2rem; /* Margine a destra */
+  font-size: 1.1rem; /* Dimensione testo leggibile */
+  text-align: justify; /* Giustifica testo */
+}
+
+/* === SEZIONE IMMAGINI === */
+.image-section {
+  flex: 1 1 40%; /* Seconda colonna */
+  display: flex;
+  flex-direction: column; /* Layout verticale */
+  gap: 2rem; /* Spazio tra immagini */
+  position: relative;
+}
+
+.image-section img {
+  border-radius: 10px; /* Angoli arrotondati */
+  box-shadow: 0 0 15px 3px rgba(255,255,255,0.7); /* Ombra / effetto luce */
+  object-fit: cover; /* Adatta proporzioni */
+  cursor: pointer; /* Cursore interattivo */
+  transition: box-shadow 0.3s ease; /* Transizione morbida */
+}
+
+/* Prima immagine */
+.image-section img:first-child {
+  width: 66%; /* Ridotta di un terzo */
+  transform: translateX(-4%); /* Leggera traslazione sinistra */
+}
+
+/* Seconda immagine */
+.image-section img:last-child {
+  width: 50%; /* Più piccola */
+  transform: translateX(4%); /* Traslazione destra */
+  align-self: flex-end; /* Allineata a destra */
+}
+
+/* === IMAGE ROW / CARDS === */
+.image-row {
+  display: flex; /* Layout orizzontale */
+  justify-content: center; /* Centra contenuti */
+  gap: 2rem; /* Distanza tra card */
+  padding: 2rem; /* Spaziatura interna */
+  flex-wrap: wrap; /* Adattamento mobile */
+}
+
+.image-card {
+  display: flex;
+  flex-direction: column; /* Layout verticale */
+  align-items: center; /* Centra contenuti */
+  text-align: center; /* Testo centrato */
+  transition: transform 0.3s ease; /* Animazione hover */
+}
+
+.image-card img {
+  width: 300px; /* Larghezza fissa desktop */
+  height: 400px; /* Altezza fissa desktop */
+  object-fit: cover; /* Mantiene proporzioni */
+  border-radius: 10px; /* Angoli arrotondati */
+  box-shadow: 0 0 12px rgba(0,0,0,0.5); /* Ombra soft */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover animato */
+}
+
+.image-label {
+  margin-top: 0.5rem; /* Spazio sopra il testo */
+  font-size: 1.8rem; /* Dimensione testo */
+  color: #fff; /* Colore bianco */
+  text-shadow: 0 0 5px #fff; /* Effetto glow */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Animazione hover */
+}
+
+.image-card:hover img {
+  transform: scale(1.05); /* Zoom leggero */
+  box-shadow: 0 0 15px rgba(255,255,255,0.7); /* Ombra più forte */
+}
+
+.image-card:hover .image-label {
+  color: red; /* Testo rosso hover */
+  text-shadow: 0 0 5px red; /* Glow rosso */
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Layout verticale */
+    text-align: center; /* Centra header */
+  }
+  .header h1 { font-size: 1.5rem; } /* Titolo ridotto */
+
+  .main-content {
+    flex-direction: column; /* Layout verticale */
+    align-items: center; /* Centra contenuti */
+    padding: 1rem; /* Riduce padding */
+  }
+
+  .text-section,
+  .image-section {
+    max-width: 100%; /* Full width */
+    flex: 1 1 100%; /* Adattamento totale */
+    padding-right: 0; /* Rimuove padding destro */
+  }
+
+  .image-section img {
+    width: 100% !important; /* Full width immagini */
+    transform: none !important; /* Rimuove traslazioni */
+    align-self: center; /* Centra immagine */
+  }
+
+  .image-row { flex-direction: column; align-items: center; } /* Cards in colonna */
+  .image-card img { width: 80%; height: auto; } /* Ridimensiona immagini */
+  .image-label { font-size: 1.2rem; } /* Riduce testo label */
+}
