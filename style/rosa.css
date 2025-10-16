@@ -17,7 +17,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(0,0,0,0.2) 250%, transparent 20%);
   color: #000;
   padding: 1rem 2rem;
   gap: 1rem;

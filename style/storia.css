@@ -17,7 +17,7 @@ body {
   display: flex; /* Layout orizzontale */
   align-items: center; /* Allineamento verticale */
   justify-content: center; /* Centra contenuto */
-  background: #fff; /* Sfondo bianco */
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(0,0,0,0.2) 250%, transparent 20%);
   color: #000; /* Testo nero */
   padding: 1rem 2rem; /* Spaziatura interna */
   gap: 1rem; /* Distanza tra elementi */
