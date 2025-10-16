@@ -163,7 +163,14 @@ body {
     align-self: center; /* Centra immagine */
   }
 
-  .image-row { flex-direction: column; align-items: center; } /* Cards in colonna */
-  .image-card img { width: 80%; height: auto; } /* Ridimensiona immagini */
-  .image-label { font-size: 1.2rem; } /* Riduce testo label */
+  .image-row{ 
+    flex-direction: column; 
+    align-items: center; 
+  } /* Cards in colonna */
+  .image-card img{ 
+    width: 80%; height: auto; 
+  } /* Ridimensiona immagini */
+  .image-label{ 
+    font-size: 1.2rem; 
+  } /* Riduce testo label */
 }
