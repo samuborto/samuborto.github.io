@@ -1,19 +1,17 @@
 /* === RESET BASE === */
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box; /* Include padding e bordo nelle dimensioni */
 }
-
-body {
+body{
   font-family: Arial, sans-serif;
   background: url(../img/sfondo.jpg) no-repeat center/cover; /* Sfondo adattivo */
   color: #fff;
   line-height: 1.6;
 }
-
 /* === HEADER === */
-.header {
+.header{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,26 +22,24 @@ body {
   position: relative;
   flex-wrap: wrap; /* Adatta su schermi piccoli */
 }
-
-.header a img {
+.header a img{
   height: clamp(50px, 8vw, 60px); /* Altezza fluida */
   object-fit: contain;
   display: block;
   filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.7));
   transition: transform 0.3s ease;
 }
-.header a img:hover { transform: scale(1.1); }
-
-.header h1 {
+.header a img:hover{ 
+  transform: scale(1.1); 
+}
+.header h1{
   flex: 1;
   text-align: center;
   font-size: clamp(1.5rem, 3vw, 2.5rem);
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
-
 /* === SPACER === */
-.spacer { height: 40px; }
-
+.spacer{ height: 40px; }
 /* === SEZIONE IMMAGINI === */
 .image-row {
   display: flex;
